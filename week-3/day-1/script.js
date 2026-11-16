@@ -16,6 +16,13 @@ console.log(typeof exampleName);     // typeof tells you the type
 // TODO: Make 3 variables for YOUR truck: a name, a number, and a true/false.
 // TODO: console.log them, and log the typeof each one.
 
+const Name = "Turkey Wings & Tings";
+const Years = 2;
+const IsOpen = true;
+
+console.log(Name, Years, IsOpen);
+console.log(typeof Name);
+
 
 // ---------- Step 2: An array (a list) ----------
 // Example:
@@ -26,6 +33,10 @@ console.log(exampleMenu.length);     // how many items
 // TODO: Make an array of 3 or more things YOUR truck sells.
 // TODO: Log the first item, the last item, and how many items there are.
 
+const Menu = ["smoked turkey wing", "smoked turkey leg", "cajun turkey wing", "cajun turkey leg", "jerk turkey wing", "jerk turkey leg", "hot honey turkey wing", "hot honey turkey leg", "mac & cheese", "collard greens", "candied yams", "dirty rice", "red beans & rice", "cajun fries", "cornbread muffins"];
+console.log(Menu[0]);
+console.log(Menu.length);
+
 
 // ---------- Step 3: An object (one thing with details) ----------
 // Example:
@@ -35,6 +46,10 @@ console.log(exampleItem["price"]);   // bracket notation
 
 // TODO: Make an object for one of YOUR menu items (name, price, spicy).
 // TODO: Log one property with dot notation and one with bracket notation.
+
+const Item = { name: "smoked turkey wing", price: 15.5, spicy: false };
+console.log(Item.name);
+console.log(Item["price"]);
 
 
 // ---------- Step 4: A function ----------
@@ -47,6 +62,10 @@ console.log(addTip(10, 2));          // 12
 // TODO: Write a function orderTotal(price, quantity) that RETURNS price * quantity.
 // TODO: Before you run it, guess what orderTotal(4.5, 3) gives. Then log it.
 
+function addTip(price, tip) {
+  return price + tip;
+}
+console.log(addTip(15.5, 3));
 
 // ---------- Extra practice (if you finish early) ----------
 // 1. Change your menu item's price AFTER you made the object, then log it again.
