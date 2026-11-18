@@ -17,6 +17,13 @@ console.log("Step 1:", exampleTruck.describe());   // Welcome to Taco Rocket!
 // TODO: Make an object for YOUR truck with a name and a describe() method that uses this.name.
 // TODO: Log the result of calling describe().
 
+const myTruck = {
+  name: "Turkey Wings & Tings",
+  describe: function () {
+    return "Welcome to " + this.name + "!";
+  },
+};
+console.log("Step 1:", myTruck.describe());
 
 // ---------- Step 2: Compare with an arrow function ----------
 // Example:
@@ -31,6 +38,7 @@ console.log("Step 2:", exampleArrowTruck.describe());   // the name is missing!
 // TODO: Add an arrow-function version to YOUR truck and log it.
 // TODO: Write one sentence in a comment: what went wrong with the arrow version?
 // (Hint: arrow functions don't get their own "this".)
+
 
 
 // ---------- Step 3: JSON text → JavaScript ----------
