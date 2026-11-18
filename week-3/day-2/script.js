@@ -16,7 +16,6 @@ console.log("Step 1:", exampleTruck.describe());   // Welcome to Taco Rocket!
 
 // TODO: Make an object for YOUR truck with a name and a describe() method that uses this.name.
 // TODO: Log the result of calling describe().
-
 const myTruck = {
   name: "Turkey Wings & Tings",
   describe: function () {
@@ -51,7 +50,11 @@ console.log("Step 3 object:", exampleParsed);
 console.log("Step 3 price:", exampleParsed.price);
 
 // TODO: Write a JSON string for one of YOUR menu items. Parse it. Log one property.
-
+const Json = '{"name": "smoked turkey wing", "price": 15.5}';
+const Parsed = JSON.parse(Json);
+console.log("Step 3 text:", Json);
+console.log("Step 3 object:", Parsed);
+console.log("Step 3 price:", Parsed.price);
 
 // ---------- Step 4: JavaScript → JSON text ----------
 // Example:
@@ -59,7 +62,8 @@ const exampleBack = JSON.stringify(exampleParsed);
 console.log("Step 4:", exampleBack, typeof exampleBack);   // it's a string again
 
 // TODO: Turn your parsed menu item back into a JSON string and log it with typeof.
-
+const Back = JSON.stringify(Parsed);
+console.log("Step 4:", Back, typeof Back);
 
 // ---------- Extra practice (if you finish early) ----------
 // 1. Make a second truck object with its own describe() method.
