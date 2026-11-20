@@ -33,7 +33,7 @@ console.log(exampleMenu.length);     // how many items
 // TODO: Make an array of 3 or more things YOUR truck sells.
 // TODO: Log the first item, the last item, and how many items there are.
 
-const Menu = ["smoked turkey wing", "smoked turkey leg", "cajun turkey wing", "cajun turkey leg", "jerk turkey wing", "jerk turkey leg", "hot honey turkey wing", "hot honey turkey leg", "mac & cheese", "collard greens", "candied yams", "dirty rice", "red beans & rice", "cajun fries", "cornbread muffins"];
+const Menu = ["smoked turkey wing", "smoked turkey leg", "deep fried turkey wing", "deep fried turkey leg", "cajun turkey wing", "cajun turkey leg", "jerk turkey wing", "jerk turkey leg", "hot honey turkey wing", "hot honey turkey leg", "mac & cheese", "collard greens", "candied yams", "dirty rice", "red beans & rice", "cajun fries", "cornbread muffins"];
 console.log(Menu[0]);
 console.log(Menu.length);
 
