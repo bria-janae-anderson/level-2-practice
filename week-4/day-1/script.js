@@ -8,10 +8,23 @@
 
 // First: replace this menu with YOUR truck's menu (keep the same shape).
 const menu = [
-  { name: "Taco", price: 4.5 },
-  { name: "Burrito", price: 9 },
-  { name: "Nachos", price: 6.25 },
-  { name: "Churro", price: 3 },
+  { name: "Smoked Turkey Wing", price: 15.5 },
+  { name: "Smoked Turkey Leg", price: 15.5 },
+  { name: "Deep Fried Turkey Wing", price: 15.5 },
+  { name: "Deep Fried Turkey Leg", price: 15.5 },
+  { name: "Cajun Turkey Wing", price: 15.5 },
+  { name: "Cajun Turkey Leg", price: 15.5 },
+  { name: "Jerk Turkey Wing", price: 15.5 },
+  { name: "Jerk Turkey Leg", price: 15.5 },
+  { name: "Hot Honey Turkey Wing", price: 15.5 },
+  { name: "Hot Honey Turkey Leg", price: 15.5 },
+  { name: "Mac & Cheese", price: 4.5 },
+  { name: "Collard Greens", price: 4.5 },
+  { name: "Candied Yams", price: 4.5 },
+  { name: "Dirty Rice", price: 4.5 },
+  { name: "Red Beans & Rice", price: 4.5 },
+  { name: "Cajun Fries", price: 4.5 },
+  { name: "Cornbread Muffins", price: 3 }
 ];
 
 
@@ -32,7 +45,10 @@ menu.forEach(logName);
 
 // YOUR TURN: log every item's PRICE.
 // Change: logName → logPrice (2 places), and .name → .price
-
+function logPrice(item) {
+  console.log(item.price);
+}
+menu.forEach(logPrice);
 
 // ---------- Step 2: Write the function right inside ----------
 // EXAMPLE: logs "Taco is on the menu", "Burrito is on the menu"...
@@ -44,13 +60,16 @@ menu.forEach(function (item) {
 
 // YOUR TURN: log "Taco costs $4.5", "Burrito costs $9"...
 // Change: " is on the menu" → " costs $" + item.price
-
+menu.forEach(function (item) {
+  console.log(item.name + " costs $" + item.price);
+});
 
 // ---------- Step 3: Put the menu on the page ----------
 // EXAMPLE: puts every NAME on the page, one per line.
 // It's the same "keep what's there and add one more" move as Menu Card.
 const menuText = document.querySelector("#menu-text");
 menuText.textContent = "";
+
 menu.forEach(function (item) {
   menuText.textContent = menuText.textContent + item.name + "\n";
 });
@@ -58,7 +77,9 @@ menu.forEach(function (item) {
 // YOUR TURN: don't copy this one. Change the example above,
 // so each line shows the name AND the price, like "Taco: $4.5".
 // Change: item.name → item.name + ": $" + item.price
-
+menu.forEach(function (item) {
+  menuText.textContent = menuText.textContent + item.name + ": $" + item.price + "\n";
+});
 
 // ---------- Extra (if you finish early): add it up ----------
 // EXAMPLE: COUNT the items. count starts at 0 BEFORE forEach,
