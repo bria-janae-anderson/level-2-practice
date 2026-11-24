@@ -9,9 +9,23 @@
 
 // First: replace this menu with YOUR truck's menu (keep the same shape).
 const menu = [
-  { name: "Taco", price: 4.5 },
-  { name: "Burrito", price: 9 },
-  { name: "Nachos", price: 6.25 },
+  { name: "Smoked Turkey Wing", price: 15.5 },
+  { name: "Smoked Turkey Leg", price: 15.5 },
+  { name: "Deep Fried Turkey Wing", price: 15.5 },
+  { name: "Deep Fried Turkey Leg", price: 15.5 },
+  { name: "Cajun Turkey Wing", price: 15.5 },
+  { name: "Cajun Turkey Leg", price: 15.5 },
+  { name: "Jerk Turkey Wing", price: 15.5 },
+  { name: "Jerk Turkey Leg", price: 15.5 },
+  { name: "Hot Honey Turkey Wing", price: 15.5 },
+  { name: "Hot Honey Turkey Leg", price: 15.5 },
+  { name: "Mac & Cheese", price: 4.5 },
+  { name: "Collard Greens", price: 4.5 },
+  { name: "Candied Yams", price: 4.5 },
+  { name: "Dirty Rice", price: 4.5 },
+  { name: "Red Beans & Rice", price: 4.5 },
+  { name: "Cajun Fries", price: 4.5 },
+  { name: "Cornbread Muffins", price: 3 }
 ];
 
 // getElementById finds ONE element by its id. Same job as querySelector("#card-area"),
@@ -28,7 +42,10 @@ area.appendChild(card);                        // 4. put it inside #card-area. N
 
 // YOUR TURN: make a second card that says your truck's name.
 // Change: card → card2 (4 places), and the text.
-
+const card = document.createElement("div");
+card.className = "card p-3";
+card.textContent = "Turkey Wings & Tings";
+area.appendChild(card);
 
 // ---------- Step 2: A card for EVERY item ----------
 // EXAMPLE: the same 4 moves, inside forEach. One card per menu item.
@@ -42,7 +59,12 @@ menu.forEach(function (item) {
 // YOUR TURN: don't copy this one. Change the example above,
 // so each card shows the name AND the price, like "Taco: $4.5".
 // Change: item.name → item.name + ": $" + item.price
-
+menu.forEach(function (item) {
+  const itemCard = document.createElement("div");
+  itemCard.className = "card p-3 text-center shadow-sm";
+  itemCard.textContent = item.name + ": $" + item.price;
+  area.appendChild(itemCard);
+})
 
 // ---------- Step 3: Dress up the cards ----------
 // YOUR TURN: in the Step 2 example, add more Bootstrap classes to the className, for example:
