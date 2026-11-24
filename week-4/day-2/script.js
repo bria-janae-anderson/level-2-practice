@@ -42,29 +42,24 @@ area.appendChild(card);                        // 4. put it inside #card-area. N
 
 // YOUR TURN: make a second card that says your truck's name.
 // Change: card → card2 (4 places), and the text.
-const card = document.createElement("div");
-card.className = "card p-3";
-card.textContent = "Turkey Wings & Tings";
-area.appendChild(card);
+const card2 = document.createElement("div");
+card2.className = "card p-3";
+card2.textContent = "Turkey Wings & Tings";
+area.appendChild(card2);
 
 // ---------- Step 2: A card for EVERY item ----------
 // EXAMPLE: the same 4 moves, inside forEach. One card per menu item.
 menu.forEach(function (item) {
   const itemCard = document.createElement("div");
-  itemCard.className = "card p-3";
-  itemCard.textContent = item.name;
+  itemCard.className = "card p-3 bg-light border-primary";
+  itemCard.textContent = item.name + ": $" + item.price;
   area.appendChild(itemCard);
 });
 
 // YOUR TURN: don't copy this one. Change the example above,
 // so each card shows the name AND the price, like "Taco: $4.5".
 // Change: item.name → item.name + ": $" + item.price
-menu.forEach(function (item) {
-  const itemCard = document.createElement("div");
-  itemCard.className = "card p-3 text-center shadow-sm";
-  itemCard.textContent = item.name + ": $" + item.price;
-  area.appendChild(itemCard);
-})
+
 
 // ---------- Step 3: Dress up the cards ----------
 // YOUR TURN: in the Step 2 example, add more Bootstrap classes to the className, for example:
